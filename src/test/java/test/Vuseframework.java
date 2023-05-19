@@ -14,12 +14,20 @@ public class Vuseframework {
 	    WebDriver driver = new ChromeDriver();
 	    driver.get("https://www.vuse.com/gb/en/create-account");
 	    driver.manage().window().maximize();
+	    
+	    
+	 WebElement sighin = driver.findElement(By.xpath("(//button)[2]"));
+	 sighin.click();
+     WebElement	nosign = driver.findElement(By.xpath("(//li)[2]"));
+     nosign.click();
+   WebElement  signemail = driver.findElement(By.xpath("//span[19]"));
+   signemail.click();
 	   
-	WebElement firstname =  driver.findElement(By.xpath("//autocomplete=[@id='120f9c6f-a3d4-4007-86c7-15b62202cf02']"));
+	WebElement firstname =  driver.findElement(By.xpath("//input[2]"));
 	firstname.sendKeys("vijay");
-	WebElement  lastname =  driver.findElement(By.xpath("//autocomplete=[@id='b2abb8a3-9182-49b5-8993-a9fabe50e928']"));
+	WebElement  lastname =  driver.findElement(By.xpath("//input[3]"));
 	lastname.sendKeys("deshwal");
-	WebElement emailid=  driver.findElement(By.xpath(""));
+	WebElement emailid=  driver.findElement(By.xpath("//input[4]"));
 	emailid.sendKeys("vijaydeshwal0582@gmail.com");
     WebElement dob = driver.findElement(By.xpath("//input[@id='28b6afea-f57f-42d0-85e7-2f1554225752']"));
     dob.click();
